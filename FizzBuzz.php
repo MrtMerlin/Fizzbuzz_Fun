@@ -29,6 +29,7 @@ foreach(range(0, 100) as $number) {
         case ($number % 5 == 0):
             echo 'Buzz, ';
             break;
+        // output number if not any of the above cases.
         default:
             echo $number . ", ";
         break;

@@ -22,7 +22,7 @@ function Fib($number)
     // while loop, counter to $number variable.
     while($counter < $number) {
         // echo first number.
-        echo ' ' . $number_1; 
+        echo ', ' . $number_1; 
         // add first and second number together.
         $number_3 = $number_2 + $number_1;
         // second number reassigned to first number.
@@ -32,7 +32,33 @@ function Fib($number)
         // counter increases
         $counter = $counter+1; 
     }
+
+    echo "<br>";
+    echo "<br>";
 }
 
+// Recursive way Fibonacchi sequence
+// number of repetitions.
+$num = 20;
 
+// for, for recursion.
+for ($count = 0; $count < $num; $count++)
+{
+    // echo out Fibonacchi function result.
+    echo Fibonacchi($count) . ', ';
+}
+
+// recursive Fibonacchi function.
+function Fibonacchi($num)
+{
+    if ($num == 0) {
+        // $num == 0;
+        return 0;
+    } else if ($num == 1) {
+        // $num == 1;
+        return 1;
+    } else {
+        return (Fibonacchi($num - 1) + Fibonacchi($num - 2));
+    }
+}
 

@@ -10,7 +10,11 @@ foreach ($numbers as $key => $number) {
     unset($numbers[$key]);
     // now if duplicate of key exists prints as duplicte.
     if (in_array($number, $numbers)) {
-        echo $number;
+        echo "Duplicate number is " . $number . ".</br>";
     }
 }
+
+
+
+
 
